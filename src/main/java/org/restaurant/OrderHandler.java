@@ -1,11 +1,9 @@
 package org.restaurant;
 
-import java.util.Collections;
-import java.util.Iterator;
 import java.util.LinkedList;
 import java.util.Objects;
 
-public class OrderHandler implements Iterable<Orders> {
+public class OrderHandler  {
     private LinkedList<Orders> orderResults = new LinkedList<>();
 
     private OrderHandler() {
@@ -69,19 +67,6 @@ public class OrderHandler implements Iterable<Orders> {
         return (LinkedList<Orders>) orderResults.clone();
     }
 
-
-    @Override
-    public Iterator<Orders> iterator() {
-        return orderResults.iterator();
-    }
-
-    @Override
-    public boolean equals(Object o) {
-        if (this == o) return true;
-        if (o == null || getClass() != o.getClass()) return false;
-        OrderHandler that = (OrderHandler) o;
-        return Objects.equals(orderResults, that.orderResults);
-    }
 
     @Override
     public int hashCode() {

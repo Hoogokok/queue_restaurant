@@ -13,4 +13,5 @@ class FoodTest {
       assertAll( () -> assertThat(chicken.getFoodName()).isEqualTo("chicken"),
               () -> assertThat(chicken.getPrice()).isEqualTo(10000));
     }
+
 }

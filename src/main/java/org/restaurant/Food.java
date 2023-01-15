@@ -5,13 +5,7 @@ import java.util.Map;
 import java.util.Objects;
 
 public class Food {
-    private static final Map<String, Food> FIXED_MENU = new HashMap<>();
 
-    static {
-        FIXED_MENU.put("참치김밥", Food.newInstance("참치김밥", 3500));
-        FIXED_MENU.put("라면", Food.newInstance("라면", 4500));
-        FIXED_MENU.put("김치볶음밥", Food.newInstance("김치볶음밥", 5500));
-    }
 
     private final String foodName;
     private final Integer price;
@@ -26,9 +20,7 @@ public class Food {
         return new Food(foodName, price);
     }
 
-    public static Food fixedMenu(String foodName) {
-        return FIXED_MENU.get(foodName);
-    }
+
 
     public String getFoodName() {
         return foodName;

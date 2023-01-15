@@ -15,12 +15,12 @@ public class Orders {
         return new Orders(food, amount);
     }
 
-    public Food getFood() {
-        return food;
+    public int total(){
+        return food.getPrice() * amount;
     }
 
-    public int getAmount() {
-        return amount;
+    public Food getFood() {
+        return food;
     }
 
     @Override

@@ -17,7 +17,7 @@ public class SalesManager {
     }
 
     public Integer totalSum() {
-        return finishOrders.stream().map(orders -> orders.getFood().getPrice() * orders.getAmount())
+        return finishOrders.stream().map(orders -> orders.total())
                 .reduce(Integer::sum).orElse(0);
     }
 
